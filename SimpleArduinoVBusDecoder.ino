@@ -22,7 +22,6 @@
  * * Hardware info:
  * VBus is NOT RS485. So you need a specific converter circuit to make the VBus data
  * readable for the Arduino UART.
- * See the Domoticz Wiki or my GitHub for a working example circuit.
  * 
  * This sketch uses the Arduino Mega and the ENC28J60 ethernet shield. Using the EthernetENC library https://github.com/jandrassy/EthernetENC
  * You can also use another Arduino like the Uno but it only has one hardware serial port.
