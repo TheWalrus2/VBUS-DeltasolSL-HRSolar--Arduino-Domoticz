@@ -168,8 +168,12 @@ if (VBusRead())
     lastTimevbus = millis(); 
     
     Serial.print("Sending to domoticz: ");
-    if (Sensor1_temp != 0){httpRequestTemp(IDXtempCollectoren, Sensor1_temp);}
-    if (Sensor2_temp != 0){httpRequestTemp(IDXtempBoilervat, Sensor2_temp);}
+    if ((Sensor1_temp > -25) and (Sensor1_temp < 130)){
+        httpRequestTemp(IDXtempCollectoren, Sensor1_temp);
+        }
+    if ((Sensor2_temp > 5) and (Sensor2_temp < 100)) {
+      httpRequestTemp(IDXtempBoilervat, Sensor2_temp);
+      }
     
   } //end loop VBus readout 
 
